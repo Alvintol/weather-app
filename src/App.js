@@ -1,16 +1,52 @@
 import React from 'react';
 import axios from 'axios'
 
-const hardcodeCity = 'Calgary';
-const hardcodeCountry = 'Canada';
+const App = () => {
 
-function App() {
+  const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${process.env.REACT_APP_LAT}&lon=${process.env.REACT_APP_LON}&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`;
 
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${hardcodeCity},${hardcodeCountry}&appid=${process.env.REACT_APP_API_KEY}`;
 
   return (
-    <div>
-      test
+    <div className='app'>
+      <div className='container'>
+
+        <div className='top'>
+          <div>
+            <div className='location'>
+              <p>city</p>
+            </div>
+            <div className='weatherIcon'>
+              <p>weatherIcon</p>
+            </div>
+          </div>
+          <div className='currentTemp'>
+            <h1>currentTemp</h1>
+          </div>
+          <div className='miniDescription'>
+            <p>miniDescription</p>
+          </div>
+          <div className='description'>
+            <p>description</p>
+          </div>
+        </div>
+        <div className='bottom'>
+          <div className='feels'>
+            <p>feels</p>
+          </div>
+          <div className='tempMin'>
+            <p>tempMin</p>
+          </div>
+          <div className='tempMax'>
+            <p>tempMax</p>
+          </div>
+          <div className='humidity'>
+            <p>humidity</p>
+          </div>
+          <div className='wind'>
+            <p>wind</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
