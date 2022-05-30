@@ -1,0 +1,19 @@
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  background-color: rgba(194, 194, 194, 0.81);
+  @include flexColumn;
+  justify-content: center;
+  align-items: center;
+
+  .cityIcon {
+    @include flexRow;
+  }
+}

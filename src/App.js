@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const App = () => {
 
-  const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${process.env.REACT_APP_LAT}&lon=${process.env.REACT_APP_LON}&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`;
+  // const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${process.env.REACT_APP_LAT}&lon=${process.env.REACT_APP_LON}&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`;
 
 
   return (
