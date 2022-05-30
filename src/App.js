@@ -16,7 +16,7 @@ const App = () => {
               <p>city</p>
             </div>
             <div className='weatherIcon'>
-              <p>weatherIcon</p>
+              <i>weatherIcon</i>
             </div>
           </div>
           <div className='currentTemp'>
@@ -36,6 +36,9 @@ const App = () => {
           <div className='day1'>
             <div className='day'>
               <p>Day 1</p>
+            </div>
+            <div className='dayIcon'>
+              <i>icon</i>
             </div>
             <div className='tempBox'>
               <div className='tempMin'>
@@ -58,6 +61,9 @@ const App = () => {
             <div className='day'>
               <p>Day 2</p>
             </div>
+            <div className='dayIcon'>
+              <i>icon</i>
+            </div>
             <div className='tempBox'>
               <div className='tempMin'>
                 <p>tempMin</p>
@@ -78,6 +84,9 @@ const App = () => {
           <div className='day3'>
             <div className='day'>
               <p>Day 3</p>
+            </div>
+            <div className='dayIcon'>
+              <i>icon</i>
             </div>
             <div className='tempBox'>
               <div className='tempMin'>
@@ -100,6 +109,9 @@ const App = () => {
             <div className='day'>
               <p>Day 4</p>
             </div>
+            <div className='dayIcon'>
+              <i>icon</i>
+            </div>
             <div className='tempBox'>
               <div className='tempMin'>
                 <p>tempMin</p>
@@ -120,6 +132,9 @@ const App = () => {
           <div className='day5'>
             <div className='day'>
               <p>Day 5</p>
+            </div>
+            <div className='dayIcon'>
+              <i>icon</i>
             </div>
             <div className='tempBox'>
               <div className='tempMin'>
@@ -142,6 +157,9 @@ const App = () => {
             <div className='day'>
               <p>Day 6</p>
             </div>
+            <div className='dayIcon'>
+              <i>icon</i>
+            </div>
             <div className='tempBox'>
               <div className='tempMin'>
                 <p>tempMin</p>
@@ -162,6 +180,9 @@ const App = () => {
           <div className='day7'>
             <div className='day'>
               <p>Day 7</p>
+            </div>
+            <div className='dayIcon'>
+              <i>icon</i>
             </div>
             <div className='tempBox'>
               <div className='tempMin'>
