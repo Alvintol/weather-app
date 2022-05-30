@@ -11,7 +11,7 @@ const App = () => {
       <div className='container'>
 
         <div className='top'>
-          <div>
+          <div className='cityIcon'>
             <div className='location'>
               <p>city</p>
             </div>
