@@ -22,28 +22,37 @@ const App = () => {
           <div className='currentTemp'>
             <h1>currentTemp</h1>
           </div>
-          <div className='miniDescription'>
-            <p>miniDescription</p>
+          <div className='feels'>
+            <p>feels</p>
+          </div>
+          <div className='main'>
+            <p>main</p>
           </div>
           <div className='description'>
             <p>description</p>
           </div>
         </div>
         <div className='bottom'>
-          <div className='feels'>
-            <p>feels</p>
-          </div>
-          <div className='tempMin'>
-            <p>tempMin</p>
-          </div>
-          <div className='tempMax'>
-            <p>tempMax</p>
-          </div>
-          <div className='humidity'>
-            <p>humidity</p>
-          </div>
-          <div className='wind'>
-            <p>wind</p>
+          <div className='day1'>
+            <div className='day'>
+              <p>Day 1</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

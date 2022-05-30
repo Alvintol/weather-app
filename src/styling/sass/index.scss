@@ -1,19 +1,25 @@
-@mixin flexColumn {
-  display: flex;
-  flex-direction: column;
-}
-@mixin flexRow {
-  display: flex;
-  flex-direction: row;
-}
+@import './mixins';
 
 body {
   background-color: rgba(194, 194, 194, 0.81);
   @include flexColumn;
-  justify-content: center;
-  align-items: center;
+  @include center;
 
   .cityIcon {
     @include flexRow;
+    @include center;
+    @include spacedChildren;
+  }
+
+  .tempBox {
+    @include flexRow;
+    @include center;
+    @include spacedChildren;
+  }
+
+  .humWindBox {
+    @include flexRow;
+    @include center;
+    @include spacedChildren;
   }
 }

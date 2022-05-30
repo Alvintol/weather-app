@@ -1,0 +1,19 @@
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin spacedChildren {
+  & > * {
+    margin: 2%;
+  }
+}

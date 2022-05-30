@@ -4,8 +4,35 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 body .cityIcon {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .cityIcon > * {
+  margin: 2%;
+}
+body .tempBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .tempBox > * {
+  margin: 2%;
+}
+body .humWindBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .humWindBox > * {
+  margin: 2%;
 }
