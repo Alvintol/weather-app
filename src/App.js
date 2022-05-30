@@ -54,6 +54,132 @@ const App = () => {
               </div>
             </div>
           </div>
+          <div className='day2'>
+            <div className='day'>
+              <p>Day 2</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
+          </div>
+          <div className='day3'>
+            <div className='day'>
+              <p>Day 3</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
+          </div>
+          <div className='day4'>
+            <div className='day'>
+              <p>Day 4</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
+          </div>
+          <div className='day5'>
+            <div className='day'>
+              <p>Day 5</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
+          </div>
+          <div className='day6'>
+            <div className='day'>
+              <p>Day 6</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
+          </div>
+          <div className='day7'>
+            <div className='day'>
+              <p>Day 7</p>
+            </div>
+            <div className='tempBox'>
+              <div className='tempMin'>
+                <p>tempMin</p>
+              </div>
+              <div className='tempMax'>
+                <p>tempMax</p>
+              </div>
+            </div>
+            <div className='humWindBox'>
+              <div className='humidity'>
+                <p>humidity</p>
+              </div>
+              <div className='wind'>
+                <p>wind</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

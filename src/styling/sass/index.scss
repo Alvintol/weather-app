@@ -5,6 +5,12 @@ body {
   @include flexColumn;
   @include center;
 
+  .bottom {
+    @include flexRow;
+    @include center;
+    @include spacedChildren;
+  }
+
   .cityIcon {
     @include flexRow;
     @include center;
