@@ -19,13 +19,13 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    opacity: 0.8;
     z-index: -1;
   }
 
   .bottom {
     @include flexRow;
     @include center;
+    max-width: 90vw;
   }
 
   .cityIcon {
@@ -47,6 +47,7 @@ body {
   }
 
   .day {
+    width: 100%;
     padding: 2%;
     background-color: rgba(247, 247, 247, 0.619);
 

@@ -1,9 +1,26 @@
-import React from 'react';
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const App = () => {
 
-  // const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${process.env.REACT_APP_LAT}&lon=${process.env.REACT_APP_LON}&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`;
+  const [state, setState] = useState({
+    data: {}
+  })
+
+  useEffect(() => {
+    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=51.0501&lon=-114.0853&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`
+
+    Promise.all([
+      axios.get(url)
+    ])
+      .then(res =>
+        setState(prev => ({
+          ...prev, data: res[0].data
+        })))
+      .then(console.log('state:', state))
+      .catch(err => { console.log(err) })
+    // eslint-disable-next-line
+  }, []);
 
 
   return (

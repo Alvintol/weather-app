@@ -19,7 +19,6 @@ body .background {
   left: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.8;
   z-index: -1;
 }
 body .bottom {
@@ -28,6 +27,7 @@ body .bottom {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 90vw;
 }
 body .cityIcon {
   display: flex;
@@ -37,7 +37,7 @@ body .cityIcon {
   text-align: center;
 }
 body .cityIcon > * {
-  margin: 2%;
+  margin: 1%;
 }
 body .tempBox {
   display: flex;
@@ -47,7 +47,7 @@ body .tempBox {
   text-align: center;
 }
 body .tempBox > * {
-  margin: 2%;
+  margin: 1%;
 }
 body .humWindBox {
   display: flex;
@@ -57,9 +57,10 @@ body .humWindBox {
   text-align: center;
 }
 body .humWindBox > * {
-  margin: 2%;
+  margin: 1%;
 }
 body .day {
+  width: 100%;
   padding: 2%;
   background-color: rgba(247, 247, 247, 0.619);
 }
