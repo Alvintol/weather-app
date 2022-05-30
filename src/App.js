@@ -8,6 +8,8 @@ const App = () => {
 
   return (
     <div className='app'>
+      <div className='background'>
+      </div>
       <div className='container'>
 
         <div className='top'>
@@ -33,8 +35,8 @@ const App = () => {
           </div>
         </div>
         <div className='bottom'>
-          <div className='day1'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 1</p>
             </div>
             <div className='dayIcon'>
@@ -57,8 +59,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='day2'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 2</p>
             </div>
             <div className='dayIcon'>
@@ -81,8 +83,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='day3'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 3</p>
             </div>
             <div className='dayIcon'>
@@ -105,8 +107,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='day4'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 4</p>
             </div>
             <div className='dayIcon'>
@@ -129,8 +131,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='day5'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 5</p>
             </div>
             <div className='dayIcon'>
@@ -153,8 +155,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='day6'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 6</p>
             </div>
             <div className='dayIcon'>
@@ -177,8 +179,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className='day7'>
-            <div className='day'>
+          <div className='day'>
+            <div className='weekday'>
               <p>Day 7</p>
             </div>
             <div className='dayIcon'>

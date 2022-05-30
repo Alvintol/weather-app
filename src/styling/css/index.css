@@ -1,10 +1,26 @@
 body {
   background-color: rgba(194, 194, 194, 0.81);
+  position: relative;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.803);
+  overflow: hidden;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+body .background {
+  content: "";
+  background: url("http://imagebank.biz/wp-content/uploads/2014/02/81753.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+  z-index: -1;
 }
 body .bottom {
   display: flex;
@@ -12,9 +28,6 @@ body .bottom {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-body .bottom > * {
-  margin: 2%;
 }
 body .cityIcon {
   display: flex;
@@ -45,4 +58,16 @@ body .humWindBox {
 }
 body .humWindBox > * {
   margin: 2%;
+}
+body .day {
+  padding: 2%;
+  background-color: rgba(247, 247, 247, 0.619);
+}
+body .day:first-child {
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+body .day:last-child {
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
