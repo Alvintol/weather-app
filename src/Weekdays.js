@@ -4,28 +4,29 @@ import moment from 'moment';
 const Weekdays = props => {
 
   const { state } = props;
-  
-  const weekdays = state.data.daily.map((day, i) =>{
-    const icon = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`
-    
-    return <div key={i} data-id={i} className='day'>
-      <div className='weekday'>
-        <p>{moment.unix(day.dt).format('dddd')}</p>
-      </div>
-      <div className='dayIcon'>
-        <img src={icon} alt='weather icon'></img>
-      </div>
-      <div className='tempBox'>
-        <div className='tempMin'>
-          <p>{day.temp.min}ºC</p>
+
+  const weekdays = state.data.daily
+    .filter((day, i) => i < 7)
+    .map((day, i) => {
+      const icon = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`
+      return <div key={i} data-id={i} className='day'>
+        <div className='weekday'>
+          <p>{moment.unix(day.dt).format('dddd')}</p>
         </div>
-        <div className='tempMax'>
-          <p>{day.temp.max}ºC</p>
+        <div className='dayIcon'>
+          <img src={icon} alt='weather icon'></img>
+        </div>
+        <div className='tempBox'>
+          <div className='tempMin'>
+            <p>{day.temp.min}º</p>
+          </div>
+          <div className='tempMax'>
+            <p>{day.temp.max}º</p>
+          </div>
         </div>
       </div>
-    </div>
     }
-  );
+    );
 
   return <div className='bottom'>
     {weekdays}

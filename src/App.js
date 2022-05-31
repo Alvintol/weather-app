@@ -22,7 +22,7 @@ const App = () => {
         <div className='container'>
           <div className='top'>
             <div className='currentTemp'>
-              <h1>Your Location: <span className='yourTemp'>{state?.data.current.temp}ºC</span></h1>
+              <h1>Calgary: <span className='yourTemp'>{state?.data.current.temp}º</span></h1>
             </div>
           </div>
           <Weekdays
