@@ -1,7 +1,7 @@
 import React from 'react';
+import moment from 'moment';
 
 const Weekdays = props => {
-  console.log('PROPS:', props)
 
   const { state } = props;
   
@@ -10,8 +10,7 @@ const Weekdays = props => {
     
     return <div key={i} data-id={i} className='day'>
       <div className='weekday'>
-        <p>Day of the week</p>
-        <p>{Date(day.dt)}</p>
+        <p>{moment.unix(day.dt).format('dddd')}</p>
       </div>
       <div className='dayIcon'>
         <img src={icon} alt='weather icon'></img>
