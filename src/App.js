@@ -15,14 +15,16 @@ const App = () => {
           className='checkButton'
           onClick={() => buttonToggle()}
         >
-          Check Weather
+          <h3>
+            Check Weather
+          </h3>
         </button>
       }
       {state.button === 'CLICKED' &&
         <div className='container'>
           <div className='top'>
             <div className='currentTemp'>
-              <h1>Calgary: <span className='yourTemp'>{state?.data.current.temp}º</span></h1>
+              <h1>Calgary: <span className='yourTemp'>{Math.round(state?.data.current.temp)}ºC</span></h1>
             </div>
           </div>
           <Weekdays

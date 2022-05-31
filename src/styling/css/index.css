@@ -21,7 +21,19 @@ body .background {
   height: 100vh;
   z-index: -1;
 }
-body .bottom {
+body .checkButton {
+  position: absolute;
+  top: 50vh;
+  left: 45vw;
+  opacity: 0.5;
+  border-radius: 10%;
+}
+body .container {
+  position: absolute;
+  top: 25vh;
+  left: 35vw;
+}
+body .container .bottom {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,46 +41,37 @@ body .bottom {
   text-align: center;
   max-width: 90vw;
 }
-body .cityIcon {
+body .container .tempBox {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
+  justify-content: space-evenly;
 }
-body .cityIcon > * {
-  margin: 1%;
+body .container .tempBox > * {
+  margin: 2%;
 }
-body .tempBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+body .container .tempBox .tempMin {
+  color: rgba(14, 37, 165, 0.817);
 }
-body .tempBox > * {
-  margin: 1%;
+body .container .tempBox .tempMax {
+  color: rgba(162, 13, 13, 0.714);
 }
-body .humWindBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-body .humWindBox > * {
-  margin: 1%;
-}
-body .day {
+body .container .day {
   width: 100%;
   padding: 2%;
-  background-color: rgba(247, 247, 247, 0.619);
+  background-color: rgba(183, 194, 208, 0.619);
+  border-top: solid gray;
+  border-bottom: solid gray;
 }
-body .day:first-child {
+body .container .day:first-child {
+  border-left: solid grey;
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
 }
-body .day:last-child {
+body .container .day:last-child {
+  border-right: solid grey;
   border-top-right-radius: 5%;
   border-bottom-right-radius: 5%;
 }

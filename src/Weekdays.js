@@ -18,16 +18,15 @@ const Weekdays = props => {
         </div>
         <div className='tempBox'>
           <div className='tempMin'>
-            <p>{day.temp.min}º</p>
+            <h3>{Math.round(day.temp.min)}º</h3>
           </div>
           <div className='tempMax'>
-            <p>{day.temp.max}º</p>
+            <h3>{Math.round(day.temp.max)}º</h3>
           </div>
         </div>
       </div>
     }
     );
-
   return <div className='bottom'>
     {weekdays}
   </div>
