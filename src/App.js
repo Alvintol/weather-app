@@ -5,9 +5,8 @@ import Weekdays from './Weekdays';
 const App = () => {
 
   const { state, buttonToggle } = useAppData();
+  const icon = {value: `https://openweathermap.org/img/wn/${state?.data?.current?.weather[0].icon}@x2.png`}
 
-  console.log('STATE:', state);
-  console.log('DATA:', state.data);
 
   return (
     <div className='app'>
@@ -29,19 +28,17 @@ const App = () => {
                 <p>Calgary</p>
               </div>
               <div className='weatherIcon'>
-                <i>{state.data.current.weather[0].icon}</i>
+                <img src={icon?.value} alt='weather icon'></img>
               </div>
             </div>
             <div className='currentTemp'>
-              <h1> {state.data.current.temp}ºC</h1>
+              <h1> {state?.data.current.temp}ºC</h1>
             </div>
           </div>
-
           <Weekdays
           key='weekday'
           state={state}
           />
-
         </div>
       }
     </div>

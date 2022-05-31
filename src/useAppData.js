@@ -8,27 +8,25 @@ const useAppData = () => {
     data: {}
   });
 
-  const buttonToggle = () => {
-    console.log('clicked')
-    return setState(prev => {
+  const buttonToggle = () =>
+    setState(prev => {
       return { ...prev, button: 'CLICKED' }
     })
+
+
+useEffect(() => {
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=51.0501&lon=-114.0853&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}&units=metric`
+
+  const getData = async () => {
+    const response = await axios.get(url)
+    setState(prev => {
+      return { ...prev, data: response.data }
+    })
   }
+  getData()
+}, []);
 
-  useEffect(() => {
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=51.0501&lon=-114.0853&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`
-
-    axios.get(url)
-      .then(res => {
-        setState(prev => {
-          return { ...prev, data: res.data }
-        })
-      })
-      .catch(err => { console.log(err) })
-    // eslint-disable-next-line
-  }, []);
-
-  return { state, buttonToggle };
+return { state, buttonToggle };
 };
 
 export default useAppData;
