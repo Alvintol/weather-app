@@ -2,8 +2,8 @@
 
 App that displays 7 day forecast in Calgary. Using the OpenWeather API
 
-![Check Weather Button]('https://github.com/Alvintol/weather-app/blob/main/public/photos/button.png?raw=true')
-![7 Day Weather Forecast Displays]('https://github.com/Alvintol/weather-app/blob/main/public/photos/display.png?raw=true')
+![Check Weather Button](https://github.com/Alvintol/weather-app/blob/main/public/photos/button.png?raw=true)
+![7 Day Weather Forecast Displays](https://github.com/Alvintol/weather-app/blob/main/public/photos/display.png?raw=true)
 # Setting up API Key 
 
 In order to use the API, you need to sign up at `https://openweathermap.org/`. It does not require a credit card. 
