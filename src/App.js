@@ -1,227 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import useAppData from './useAppData';
+import Weekdays from './Weekdays';
 
 const App = () => {
 
-  const [state, setState] = useState({
-    data: {}
-  })
+  const { state, buttonToggle } = useAppData();
 
-  useEffect(() => {
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=51.0501&lon=-114.0853&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}`
-
-    Promise.all([
-      axios.get(url)
-    ])
-      .then(res =>
-        setState(prev => ({
-          ...prev, data: res[0].data
-        })))
-      .then(console.log('state:', state))
-      .catch(err => { console.log(err) })
-    // eslint-disable-next-line
-  }, []);
-
+  console.log('STATE:', state);
+  console.log('DATA:', state.data);
 
   return (
     <div className='app'>
       <div className='background'>
       </div>
-      <div className='container'>
+      {state.button === 'WAITING' &&
+        <button
+          className='checkButton'
+          onClick={() => buttonToggle()}
+        >
+          Check Weather
+        </button>
+      }
+      {state.button === 'CLICKED' &&
+        <div className='container'>
+          <div className='top'>
+            <div className='cityIcon'>
+              <div className='location'>
+                <p>Calgary</p>
+              </div>
+              <div className='weatherIcon'>
+                <i>{state.data.current.weather[0].icon}</i>
+              </div>
+            </div>
+            <div className='currentTemp'>
+              <h1> {state.data.current.temp}ºC</h1>
+            </div>
+          </div>
 
-        <div className='top'>
-          <div className='cityIcon'>
-            <div className='location'>
-              <p>city</p>
-            </div>
-            <div className='weatherIcon'>
-              <i>weatherIcon</i>
-            </div>
-          </div>
-          <div className='currentTemp'>
-            <h1>currentTemp</h1>
-          </div>
-          <div className='feels'>
-            <p>feels</p>
-          </div>
-          <div className='main'>
-            <p>main</p>
-          </div>
-          <div className='description'>
-            <p>description</p>
-          </div>
+          <Weekdays
+          key='weekday'
+          state={state}
+          />
+
         </div>
-        <div className='bottom'>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 1</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 2</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 3</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 4</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 5</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 6</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-          <div className='day'>
-            <div className='weekday'>
-              <p>Day 7</p>
-            </div>
-            <div className='dayIcon'>
-              <i>icon</i>
-            </div>
-            <div className='tempBox'>
-              <div className='tempMin'>
-                <p>tempMin</p>
-              </div>
-              <div className='tempMax'>
-                <p>tempMax</p>
-              </div>
-            </div>
-            <div className='humWindBox'>
-              <div className='humidity'>
-                <p>humidity</p>
-              </div>
-              <div className='wind'>
-                <p>wind</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      }
     </div>
   );
 }
